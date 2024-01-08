@@ -1,0 +1,38 @@
+.wc-sub-box-skip-shipment-modal .modal__container {
+    text-align: center;
+}
+
+.wc-sub-box-skip-shipment-modal .modal__header {
+    flex-direction: column;
+}
+
+.wc-sub-box-skip-shipment-modal .modal__title {
+    color: inherit;
+}
+
+.wc-sub-box-skip-shipment-modal .modal__close {
+    align-self: flex-end;
+}
+
+.wc-sub-box-skip-shipment-modal .modal__content {
+    border-block: 1px solid #ccc;
+    margin-block: 1rem;
+    padding-block: 1rem;
+}
+
+.wc-sub-box-skip-shipment-modal .modal__content p {
+    padding-top: 0;
+    margin-top: 0
+}
+
+.wc-sub-box-skip-shipment-modal .modal__content p:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+.wc-sub-box-skip-shipment-modal .modal__btn {
+    font-size: 1rem;
+    padding: .55rem 1.2rem;
+}
+
+
