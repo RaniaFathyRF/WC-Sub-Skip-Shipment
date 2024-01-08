@@ -21,14 +21,14 @@ if (!class_exists('WC_Sub_Skip_Shipment_General_Settings')) {
         {
             // add wc sub box general settings
             add_filter('woocommerce_settings_tabs_array', array($this, 'wc_sub_skip_shipment_add_settings_tab'), 99);
-            add_action('woocommerce_settings_tabs_wc_sub_box_extra_actions', array($this, 'wc_sub_skip_shipment_settings_tab_content'));
-            add_action('woocommerce_update_options_wc_sub_box_extra_actions', array($this, 'wc_sub_skip_shipment_update_settings'));
+            add_action('woocommerce_settings_tabs_wc_sub_skip_shipment', array($this, 'wc_sub_skip_shipment_settings_tab_content'));
+            add_action('woocommerce_update_options_wc_sub_skip_shipment', array($this, 'wc_sub_skip_shipment_update_settings'));
 
         }
 
         public function wc_sub_skip_shipment_add_settings_tab($tabs)
         {
-            $tabs['wc_sub_box_extra_actions'] = __('WC Sub Box Extra Action', 'wc-sub-skip-shipment');
+            $tabs['wc_sub_skip_shipment'] = __('WC Sub Skip Shipment', 'wc-sub-skip-shipment');
 
             return $tabs;
         }
@@ -42,13 +42,13 @@ if (!class_exists('WC_Sub_Skip_Shipment_General_Settings')) {
         {
 
             $settings[self::SECTION_TITLE_KEY] = array(
-                'name' => __('WC Sub Box Extra Action Settings', 'wc-sub-skip-shipment'),
+                'name' => __('WC Sub Skip Shipment Settings', 'wc-sub-skip-shipment'),
                 'type' => 'title',
-                'desc' => __('Configure your WC Sub Box Extra Action settings below:', 'wc-sub-skip-shipment'),
+                'desc' => __('Configure your WC Sub Skip Shipment settings below:', 'wc-sub-skip-shipment'),
                 'id' => self::SECTION_TITLE_ID
             );
             // add custom settings
-            $settings = apply_filters('wc_sub_box_extra_actions_add_settings', $settings);
+            $settings = apply_filters('wc_sub_skip_shipment_add_settings', $settings);
 
             $settings[self::SECTION_END_KEY] = array(
                 'type' => 'sectionend',

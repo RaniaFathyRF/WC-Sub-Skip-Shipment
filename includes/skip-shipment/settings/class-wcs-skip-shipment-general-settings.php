@@ -15,7 +15,7 @@ if (!class_exists('WCS_Skip_Shipment_Settings')) {
          */
         public function __construct()
         {
-            add_filter('wc_sub_box_extra_actions_add_settings', array($this, 'add_skip_shipment_option'), 10);
+            add_filter('wc_sub_skip_shipment_add_settings', array($this, 'add_skip_shipment_option'), 10);
 
         }
 
